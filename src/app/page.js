@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import Footer from "@/lib/components/Footer";
 import Navbar from "@/lib/components/Navbar";
 import { useTheme } from "@/lib/hooks/useTheme";
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
 
       <div className="text-dark-accenttext flex justify-center items-center px-36 pt-24 flex-col">
-        <q className="text-4xl">You can fail at what you don't want, so you might as well take a change on doing what you love</q>
+        <q className="text-4xl">You can fail at what you do not want, so you might as well take a change on doing what you love</q>
         <div className="flex justify-end w-full">
         <p className="mt-6 text-3xl">- Jim Carrey</p>
         </div>

@@ -12,7 +12,7 @@ export default function Home() {
   const darkTheme = "bg-dark-bg text-light-body";
 
   const skill = [
-    { name: "HTML", image: "/d.svg" },
+    { name: "HTML", image: "/html.svg" },
     { name: "Javascript", image: "/javascript.svg" },
     { name: "Typescript", image: "/typescript.svg" },
     { name: "CSS", image: "/css.svg" },

@@ -33,26 +33,26 @@ export default function Home() {
       <Navbar />
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col font-montserrat px-5 h-1/2-screen bg-[url('/prau.jpg')] bg-cover relative ">
-        <h1 className="text-4xl lg:text-7xl text-dark-primary opacity-75 hover:opacity-100 z-40">
+        <h1 className="text-2xl lg:text-7xl text-dark-primary opacity-75 hover:opacity-100 z-40">
           Dhaifan Dito Adrian
         </h1>
-        <p className="text-2xl lg:text-3xl text-dark-secondary">
+        <p className="text-xl lg:text-3xl text-dark-secondary">
           Front-End Developer
         </p>
         <div className="w-3/4 h-1/2 border-dark-primary border-8 border-solid absolute left-0 right-0 mx-auto opacity-75"></div>
       </div>
       {/* Quote Section */}
-      <div className="text-dark-accenttext flex justify-center items-center px-36 pt-24 flex-col">
-        <q className="text-4xl">
+      <div className="text-dark-accenttext flex justify-center items-center px-6 lg:px-36 pt-24 flex-col">
+        <q className=" text-xl lg:text-4xl">
           You can fail at what you do not want, so you might as well take a
           change on doing what you love
         </q>
         <div className="flex justify-end w-full">
-          <p className="mt-6 text-3xl">- Jim Carrey</p>
+          <p className="mt-6 text-xl lg:text-3xl">- Jim Carrey</p>
         </div>
       </div>
       {/* About Section */}
-      <div className="font-roboto min-h-screen px-36 lg:grid grid-cols-5 mb-24 lg:mb-0 ">
+      <div className="font-roboto min-h-screen px-16 lg:px-36 lg:grid grid-cols-5 mb-24 lg:mb-0 ">
         <div className="grid-subsets-col col-span-2 text-4xl py-36 flex items-center flex-col w-full ">
           <div className="text-dark-primary">
             <h1 className="my-6">About Dito.</h1>
@@ -129,7 +129,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-100 transition-height duration-500 bg-dark-primary px-2 h-20 lg:hover:h-100 hover:h-110 shadow-xl flex-col items-center  m-3 relative group">
+            <div className="w-100 transition-height duration-500 bg-dark-primary px-4 lg:px-2 h-20 lg:hover:h-100 hover:h-110 shadow-xl flex-col items-center  m-3 relative group">
               <p className="font-bold text-2xl py-6 flex justify-center items-center ">
                 Experience
               </p>
@@ -176,15 +176,15 @@ export default function Home() {
       </div>
       {/* Skill Section */}
       <div className="lg:grid grid-cols-5">
-        <div className="grid-subsets-col col-span-2 text-4xl  flex  justify-center w-full mb-12  text-dark-primary ">
-          <div>
+        <div className="grid-subsets-col col-span-2 text-4xl flex justify-center w-full mb-12  text-dark-primary ">
+          <div className="flex lg:flex-none justify-center items-center flex-col">
             <h2>Front End </h2>
             <p>Skill Set</p>
           </div>
         </div>
         <div className="grid-subsets-col col-span-2">
           <div className="flex justify-center items-center">
-            <div className="grid grid-cols-2 lg:grid-cols-5  lg:gap-y-10 lg:gap-x-36">
+            <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-y-10 gap-x-3 gap-y-2 lg:gap-x-36">
               {skill.map((i, index) => {
                 return (
                   <div className="group h-32 w-32 font-roboto" key={index}>

@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/lib/hooks/useTheme";
+import { Weight } from "lucide-react";
+import { Inter, Lato, Montserrat, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({  subsets: ["latin"], display: "swap", variable: "--font-montserrat"})
+const lato = Lato({  subsets: ["latin"], display: "swap", variable: "--font-lato", weight: "300"})
+const roboto = Roboto_Mono({  subsets: ["latin"], display: "swap", variable: "--font-roboto"})
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeProvider>
+      <body className={` ${montserrat.variable} ${lato.variable} ${roboto.variable}`}>
+        <div className="font-montserrat">{children}</div>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

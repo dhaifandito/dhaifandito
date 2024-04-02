@@ -12,7 +12,7 @@ export default function Home() {
   const darkTheme = "bg-dark-bg text-light-body";
 
   const skill = [
-    { name: "HTML", image: "/html.svg" },
+    { name: "HTML", image: "/d.svg" },
     { name: "Javascript", image: "/javascript.svg" },
     { name: "Typescript", image: "/typescript.svg" },
     { name: "CSS", image: "/css.svg" },
@@ -31,16 +31,24 @@ export default function Home() {
       } overflow-x-hidden`}
     >
       <Navbar />
+      {/* Hero Section */}
       <div className="flex justify-center items-center flex-col font-montserrat px-5 h-1/2-screen bg-[url('/prau.jpg')] bg-cover relative ">
-        <h1 className="text-4xl lg:text-7xl text-dark-primary opacity-75 hover:opacity-100 z-40">Dhaifan Dito Adrian</h1>
-        <p className="text-2xl lg:text-3xl text-dark-secondary">Front-End Developer</p>
+        <h1 className="text-4xl lg:text-7xl text-dark-primary opacity-75 hover:opacity-100 z-40">
+          Dhaifan Dito Adrian
+        </h1>
+        <p className="text-2xl lg:text-3xl text-dark-secondary">
+          Front-End Developer
+        </p>
         <div className="w-3/4 h-1/2 border-dark-primary border-8 border-solid absolute left-0 right-0 mx-auto opacity-75"></div>
       </div>
-
+      {/* Quote Section */}
       <div className="text-dark-accenttext flex justify-center items-center px-36 pt-24 flex-col">
-        <q className="text-4xl">You can fail at what you do not want, so you might as well take a change on doing what you love</q>
+        <q className="text-4xl">
+          You can fail at what you do not want, so you might as well take a
+          change on doing what you love
+        </q>
         <div className="flex justify-end w-full">
-        <p className="mt-6 text-3xl">- Jim Carrey</p>
+          <p className="mt-6 text-3xl">- Jim Carrey</p>
         </div>
       </div>
       {/* About Section */}
@@ -168,49 +176,43 @@ export default function Home() {
       </div>
       {/* Skill Section */}
       <div className="lg:grid grid-cols-5">
-      <div className="grid-subsets-col col-span-2 text-4xl  flex  justify-center w-full mb-12  text-dark-primary ">
-                      <div>
-      <h2 >Front End </h2>
-      <p>Skill Set</p>
-      </div>
-      </div>
-      <div className="grid-subsets-col col-span-2">
-      
-      <div className="flex justify-center items-center">
-      <div className="grid grid-cols-2 lg:grid-cols-5  lg:gap-y-10 lg:gap-x-36">
-          {skill.map((i, index) => {
-            return (
-              <div className="group h-32 w-32 font-roboto" key={index}>
-                <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  <div className="absolute inset-0 border-4 border-dark-primary border-solid rounded-xl m-1 flex justify-center items-center ">
-                    <div className=" w-3/4">
-                      <Image
-                        src={i.image}
-                        alt={i.name}
-                        width={500}
-                        height={100}
-                      />
+        <div className="grid-subsets-col col-span-2 text-4xl  flex  justify-center w-full mb-12  text-dark-primary ">
+          <div>
+            <h2>Front End </h2>
+            <p>Skill Set</p>
+          </div>
+        </div>
+        <div className="grid-subsets-col col-span-2">
+          <div className="flex justify-center items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-5  lg:gap-y-10 lg:gap-x-36">
+              {skill.map((i, index) => {
+                return (
+                  <div className="group h-32 w-32 font-roboto" key={index}>
+                    <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                      <div className="absolute inset-0 border-4 border-dark-primary border-solid rounded-xl m-1 flex justify-center items-center ">
+                        <div className=" w-3/4">
+                          <Image
+                            src={i.image}
+                            alt={i.name}
+                            width={500}
+                            height={100}
+                          />
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 h-full w-full rounded-xl bg-dark-primary px-12 text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <div className="flex min-h-full flex-col items-center justify-center font-bold">
+                          {i.name}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 h-full w-full rounded-xl bg-dark-primary px-12 text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <div className="flex min-h-full flex-col items-center justify-center font-bold">
-                      {i.name}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
-      
-      </div>
-      </div>
-      {/* Contact */}
-      <div>
-        
-      </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
